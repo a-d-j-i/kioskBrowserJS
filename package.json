@@ -1,0 +1,30 @@
+{
+    "name": "kiosk-browser-js",
+    "version": "0.1.0",
+    "main": "index.js",
+    "license": "MIT",
+    "directories": {
+        "lib": "lib",
+        "test": "test"
+    },
+    "files": [
+        "bin/",
+        "lib/",
+        "src/"
+    ],
+    "scripts": {
+        "start": "parcel serve --https src/index.html",
+        "build": "cross-env NODE_ENV=production parcel build src/index.html --public-url .",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d dist"
+    },
+    "devDependencies": {
+        "@types/node": "^20.10.6",
+        "cross-env": "^7.0.3",
+        "gh-pages": "^6.1.0",
+        "parcel-bundler": "^1.12.5",
+        "sass": "^1.69.5",
+        "typescript": "^5.3.3"
+    },
+    "repository": "git@github.com:a-d-j-i/kioskBrowserJS.git"
+}
